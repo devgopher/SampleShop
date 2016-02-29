@@ -1,0 +1,17 @@
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Resources\CommonStrings.en-US.resources
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Resources\CommonStrings.resources
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Resources\CommonStrings.ru-RU.resources
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Resources\MailLogElement.en-EN.resources
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Resources\MailLogElement.ru-RU.resources
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\SampleShopServer.exe.config
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\SampleShopServer.exe
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\SampleShopServer.pdb
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Logger.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Npgsql.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Logger.pdb
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\Npgsql.xml
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\en-US\Logger.resources.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\Debug\ru-RU\Logger.resources.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.csprojResolveAssemblyReference.cache
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.exe
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.pdb

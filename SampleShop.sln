@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+# SharpDevelop 5.1
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleShopClient", "SampleShop\SampleShopClient.csproj", "{BC01BACA-A514-4CE6-8D14-7ADB54EEEAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleShopServer", "SampleShopServer\SampleShopServer.csproj", "{6BEFFC31-F3AA-4952-A1CA-59E78CFC8EC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{A7DEADB2-FB2C-4AFE-9608-0BFCD0E3DD2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServer", "TestServer\TestServer.csproj", "{44AEB7C1-9190-40E3-A50B-9050052BD46D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC01BACA-A514-4CE6-8D14-7ADB54EEEAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC01BACA-A514-4CE6-8D14-7ADB54EEEAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC01BACA-A514-4CE6-8D14-7ADB54EEEAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC01BACA-A514-4CE6-8D14-7ADB54EEEAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BEFFC31-F3AA-4952-A1CA-59E78CFC8EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEFFC31-F3AA-4952-A1CA-59E78CFC8EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEFFC31-F3AA-4952-A1CA-59E78CFC8EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEFFC31-F3AA-4952-A1CA-59E78CFC8EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DEADB2-FB2C-4AFE-9608-0BFCD0E3DD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DEADB2-FB2C-4AFE-9608-0BFCD0E3DD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DEADB2-FB2C-4AFE-9608-0BFCD0E3DD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DEADB2-FB2C-4AFE-9608-0BFCD0E3DD2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44AEB7C1-9190-40E3-A50B-9050052BD46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AEB7C1-9190-40E3-A50B-9050052BD46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AEB7C1-9190-40E3-A50B-9050052BD46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AEB7C1-9190-40E3-A50B-9050052BD46D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\obj\Debug\TestServer.csprojResolveAssemblyReference.cache
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\TestServer.exe.config
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\TestServer.exe
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\TestServer.pdb
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\SampleShopServer.exe
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\Npgsql.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\Logger.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\SampleShopServer.pdb
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\Npgsql.xml
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\Logger.pdb
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\en-US\Logger.resources.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\bin\Debug\ru-RU\Logger.resources.dll
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\obj\Debug\TestServer.exe
+C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\TestServer\obj\Debug\TestServer.pdb

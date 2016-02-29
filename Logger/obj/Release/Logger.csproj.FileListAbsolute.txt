@@ -1,0 +1,10 @@
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\bin\Release\Resources\CommonStrings.resources
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\bin\Release\Resources\CommonStrings.en-US.resources
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\bin\Release\Resources\CommonStrings.ru-RU.resources
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\bin\Release\Logger.dll
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\bin\Release\en-US\Logger.resources.dll
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\bin\Release\ru-RU\Logger.resources.dll
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\obj\Release\Logger.csprojResolveAssemblyReference.cache
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\obj\Release\en-US\Logger.resources.dll
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\obj\Release\ru-RU\Logger.resources.dll
+C:\Users\Igor\Documents\GitHub\DataDwarf\Logger\obj\Release\Logger.dll
