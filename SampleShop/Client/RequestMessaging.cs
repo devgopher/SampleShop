@@ -14,12 +14,12 @@ namespace SampleShopClient
 	/// <summary>
 	/// Description of RequestMessaging.
 	/// </summary>
-	public class RequestMessaging
+	public static class RequestMessaging
 	{
-		private string server_ip =
+		private static string server_ip =
 			Settings.config.AppSettings.Settings["server_ip"].Value;
 		
-		private ServerMessage ProcessRequest( string request_contents ) {
+		public static ServerMessage ProcessRequest( string request_contents ) {
 			if ( request_contents.Contains("<root>") &&
 			    request_contents.Contains("</root>"))
 			{
@@ -28,14 +28,14 @@ namespace SampleShopClient
 					request_contents.IndexOf("<root>");
 				var xml = request_contents.Substring( start_xml, length );
 				
-				ServerMessage msg = new ServerMessage();
+				var msg = new ServerMessage();
 				msg.FromXML( xml );
 				return msg;
 			}
 			return null;
 		}
 		
-		public HttpWebResponse MakeRequest( SampleShopServer.Message msg ) {
+		public static HttpWebResponse MakeRequest( SampleShopServer.Message msg ) {
 			try {
 				HttpWebRequest web_request;
 				

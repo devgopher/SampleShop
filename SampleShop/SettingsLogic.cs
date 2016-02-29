@@ -6,7 +6,6 @@
 using System;
 using System.Windows.Forms;
 using System.Configuration;
-using System.Configuration.Assemblies;
 
 namespace SampleShopClient
 {
