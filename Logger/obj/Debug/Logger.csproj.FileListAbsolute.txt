@@ -26,3 +26,17 @@ C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\Logger\obj\Debug\ru-RU\
 C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\Logger\obj\Debug\Logger.dll
 C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\Logger\obj\Debug\Logger.pdb
 C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Resources\CommonStrings.resources
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Resources\MailLogElement.en-EN.resources
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Resources\CommonStrings.en-US.resources
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Resources\CommonStrings.ru-RU.resources
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Resources\MailLogElement.ru-RU.resources
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Logger.dll
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\Logger.pdb
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\en-US\Logger.resources.dll
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\bin\Debug\ru-RU\Logger.resources.dll
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\obj\Debug\en-US\Logger.resources.dll
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\obj\Debug\ru-RU\Logger.resources.dll
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\obj\Debug\Logger.dll
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\Logger\obj\Debug\Logger.pdb

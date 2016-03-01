@@ -15,3 +15,4 @@ C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\bin\De
 C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.csprojResolveAssemblyReference.cache
 C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.exe
 C:\Users\Igor\Documents\SharpDevelop Projects\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.pdb
+C:\Users\igor.evdokimov\Documents\Github\SampleShop\SampleShopServer\obj\Debug\SampleShopServer.csprojResolveAssemblyReference.cache

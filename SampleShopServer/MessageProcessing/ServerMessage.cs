@@ -99,9 +99,5 @@ namespace SampleShopServer
 			
 			return ret;
 		}
-		
-		public ServerMessage() {
-			
-		}
 	}
 }

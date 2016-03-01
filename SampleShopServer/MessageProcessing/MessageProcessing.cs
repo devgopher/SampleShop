@@ -18,7 +18,7 @@ namespace SampleShopServer
 			Logger.Logger.GetInstance();
 		
 		private static DataTable SelectShopsList( ClientMessage msg ) {
-			string query = "SELECT \"Name\" shop_name, \"Phone\" shop_phone, " +
+			string query = "SELECT id shop_id, \"Name\" shop_name, \"Phone\" shop_phone, " +
 				"\"Address\" shop_address, \"Email\" shop_email" +
 				" FROM \"Shops\"";
 			
@@ -40,8 +40,8 @@ namespace SampleShopServer
 		}
 		
 		private static DataTable SelectGoodsList( ClientMessage msg ) {
-			string query = "SELECT gds.\"Name\" good_name, "+
-				" sps.\"Name\" shop_name, gis.\"Count\" good_count"+
+			string query = "SELECT gds.id good_id, gds.\"Name\" good_name, "+
+				" sps.\"Name\" shop_name, gis.\"Count\" good_count, sps.id shop_id"+
 				" FROM \"GoodsInShops\" gis, \"Goods\" gds, \"Shops\" sps " +
 				" WHERE gis.\"Good_id\" = gds.id AND " +
 				" gis.\"Shop_id\" = sps.id";
@@ -91,7 +91,7 @@ namespace SampleShopServer
 				"\"Phone\"='"+msg.Contents["shop_phone"]+"', " +
 				"\"Address\"='"+msg.Contents["shop_address"]+"'," +
 				"\"Email\"='"+msg.Contents["shop_email"]+
-				" WHERE id = "+msg.Contents["id"];
+				" WHERE id = "+msg.Contents["shop_id"];
 			
 			var dbint = new Model.DatabaseInteraction();
 			dbint.Connection.Open();

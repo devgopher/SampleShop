@@ -4,7 +4,6 @@
  * Время: 22:28
  */
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace SampleShopClient

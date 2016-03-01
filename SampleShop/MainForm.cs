@@ -17,19 +17,28 @@ namespace SampleShopClient
 	{
 		public MainForm()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
-		void Button1Click(object sender, EventArgs e)
+		void SettingsClick(object sender, EventArgs e)
 		{
 			var settings_form = new Settings();
 			settings_form.Show();
+		}
+		
+		void CurrentShopGoodiesCellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			var sender_grid = sender as DataGridView;
+			if ( sender_grid != null )
+			{
+				if ( sender_grid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 ) {
+					var selected_row = sender_grid.Rows[e.RowIndex];
+					if ( selected_row.Cells["good_id"].Value != null ) {
+						// обрабатываем нажатие кнопки в ячейке
+						var other_shops= new OtherShops( Int64.Parse(selected_row.Cells["good_id"].Value.ToString()));
+						other_shops.Show();
+					}
+				}
+			}
 		}
 	}
 }

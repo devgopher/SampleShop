@@ -14,15 +14,8 @@ namespace SampleShopClient
 	public static class Requests
 	{
 		public static readonly Configuration config =
-			ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-		
-		private static string GetResponseText( ClientMessage serv_msg ) {
-			var response = RequestMessaging.MakeRequest( serv_msg );
-			var resp_stream = response.GetResponseStream();
-			var rec_bytes = new byte[16000];
-			resp_stream.Read( rec_bytes, 0, rec_bytes.Length );
-			return Encoding.UTF8.GetString( rec_bytes );
-		}
+			ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);	
+
 		
 		public static ServerMessage AddShop() {
 			try {
@@ -32,10 +25,8 @@ namespace SampleShopClient
 				new_cm.Contents["shop_phone"] = config.AppSettings.Settings["shop_phone"].Value;
 				new_cm.Contents["shop_address"] = config.AppSettings.Settings["shop_address"].Value;
 				new_cm.Contents["shop_email"] = config.AppSettings.Settings["shop_email"].Value;
-				
-				string response_text = GetResponseText( new_cm );
 
-				return RequestMessaging.ProcessRequest( response_text );
+				RequestMessaging.Process( new_cm );
 			} catch ( Exception ex ) {
 				MessageBox.Show( "ошибка получения ID:"+ex.Message );
 			}

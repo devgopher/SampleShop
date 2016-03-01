@@ -25,14 +25,14 @@ namespace SampleShop
 			
 			if ( IsConfigured() )
 				Application.Run(new SampleShopClient.MainForm());
-			else
+			else {
 				Application.Run(new SampleShopClient.Settings());
+			}
 		}
 		
 		private static bool IsConfigured() {
 			var aset = ConfigurationManager.AppSettings["server_ip"];
 			return aset != null;
 		}
-		
 	}
 }

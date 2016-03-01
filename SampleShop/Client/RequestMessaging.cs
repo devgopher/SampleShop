@@ -18,15 +18,33 @@ namespace SampleShopClient
 	{
 		private static string server_ip =
 			Settings.config.AppSettings.Settings["server_ip"].Value;
+		private const int max_ba_length = 1048576;
 		
-		public static ServerMessage ProcessRequest( string request_contents ) {
-			if ( request_contents.Contains("<root>") &&
-			    request_contents.Contains("</root>"))
+		private static string GetResponseText( ClientMessage msg ) {
+			var response = RequestMessaging.GetResponseOnMessage( msg );
+			var resp_stream = response.GetResponseStream();
+			var rec_bytes = new byte[max_ba_length];
+			resp_stream.Read( rec_bytes, 0, rec_bytes.Length );
+			return Encoding.UTF8.GetString( rec_bytes );
+		}
+		
+		public static ServerMessage Process( ClientMessage msg )  {			
+			var response = GetResponseOnMessage( msg );
+			if ( response != null ) {								
+				string response_text = GetResponseText( msg );
+				return RequestMessaging.ProcessResponseText( response_text );
+			}
+			return null;
+		}
+		
+		public static ServerMessage ProcessResponseText( string contents ) {
+			if ( contents.Contains("<root>") &&
+			    contents.Contains("</root>"))
 			{
-				var start_xml = request_contents.IndexOf("<root>");
-				var length = request_contents.IndexOf("</root>")+7-
-					request_contents.IndexOf("<root>");
-				var xml = request_contents.Substring( start_xml, length );
+				var start_xml = contents.IndexOf("<root>");
+				var length = contents.IndexOf("</root>")+7-
+					contents.IndexOf("<root>");
+				var xml = contents.Substring( start_xml, length );
 				
 				var msg = new ServerMessage();
 				msg.FromXML( xml );
@@ -35,7 +53,7 @@ namespace SampleShopClient
 			return null;
 		}
 		
-		public static HttpWebResponse MakeRequest( SampleShopServer.Message msg ) {
+		public static HttpWebResponse GetResponseOnMessage( ClientMessage msg ) {
 			try {
 				HttpWebRequest web_request;
 				
