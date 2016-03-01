@@ -89,6 +89,7 @@ namespace SampleShopClient
 			this.current_shop_goodies.Size = new System.Drawing.Size(607, 356);
 			this.current_shop_goodies.TabIndex = 2;
 			this.current_shop_goodies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CurrentShopGoodiesCellContentClick);
+			this.current_shop_goodies.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CurrentShopGoodiesCellValueChanged);
 			// 
 			// GoodName
 			// 
@@ -101,7 +102,7 @@ namespace SampleShopClient
 			// good_id
 			// 
 			this.good_id.HeaderText = "ID товара";
-			this.good_id.Name = "good_id";
+			this.good_id.Name = "GoodId";
 			this.good_id.ReadOnly = true;
 			// 
 			// GoodQuantity

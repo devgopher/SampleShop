@@ -4,8 +4,6 @@
  * Time: 10:19
  */
 using System;
-using System.Configuration;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace SampleShopClient
@@ -20,7 +18,7 @@ namespace SampleShopClient
 		public OtherShops( Int64 _good_id  )
 		{
 			InitializeComponent();
-			GetShopId();
+			good_id = _good_id;
 		}
 	}
 }

@@ -20,11 +20,14 @@ namespace SampleShopClient
 				if ( config == null )
 					config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 				return config;
-			}			
+			}
 		}
 		
 		static CommonSettings() {
-			CurrentShopId = Int64.Parse(Config.AppSettings.Settings["shop_id"].Value);
+			if ( Config.AppSettings.Settings["shop_id"] != null )
+				CurrentShopId = Int64.Parse(Config.AppSettings.Settings["shop_id"].Value);
+			else
+				CurrentShopId = -1;
 		}
 		
 		public static Int64 CurrentShopId {

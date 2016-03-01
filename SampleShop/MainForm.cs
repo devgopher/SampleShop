@@ -40,5 +40,23 @@ namespace SampleShopClient
 				}
 			}
 		}
+		
+		void CurrentShopGoodiesCellValueChanged(object sender, DataGridViewCellEventArgs e)
+		{
+			if ( e.RowIndex < 0 )
+				return;
+			var sender_grid = sender as DataGridView;
+			var selected_row = sender_grid.Rows[e.RowIndex];
+			Int32 new_good_cnt = -1;
+			Int64 good_id = -1;
+			
+			if (  sender_grid.Columns[e.ColumnIndex].Name == "GoodQuantity") {
+				if (  Int32.TryParse(selected_row.Cells["GoodQuantity"].Value.ToString(), out new_good_cnt) &&
+				    Int64.TryParse(selected_row.Cells["GoodId"].Value.ToString(), out good_id))
+				{
+					Requests.UpdateGoodsCount( good_id, new_good_cnt );
+				}
+			}
+		}
 	}
 }
