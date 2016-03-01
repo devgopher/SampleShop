@@ -22,7 +22,7 @@ namespace SampleShopClient
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox shop_id;
 		private System.Windows.Forms.TextBox server_ip;
-		private System.Windows.Forms.TextBox email;
+		private System.Windows.Forms.TextBox shop_email;
 		private System.Windows.Forms.Label label6;
 
 		
@@ -58,7 +58,7 @@ namespace SampleShopClient
 			this.label5 = new System.Windows.Forms.Label();
 			this.shop_id = new System.Windows.Forms.TextBox();
 			this.server_ip = new System.Windows.Forms.TextBox();
-			this.email = new System.Windows.Forms.TextBox();
+			this.shop_email = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -159,13 +159,13 @@ namespace SampleShopClient
 			this.server_ip.Size = new System.Drawing.Size(200, 20);
 			this.server_ip.TabIndex = 11;
 			// 
-			// email
+			// shop_email
 			// 
-			this.email.Location = new System.Drawing.Point(135, 92);
-			this.email.Margin = new System.Windows.Forms.Padding(2);
-			this.email.Name = "email";
-			this.email.Size = new System.Drawing.Size(200, 20);
-			this.email.TabIndex = 13;
+			this.shop_email.Location = new System.Drawing.Point(135, 92);
+			this.shop_email.Margin = new System.Windows.Forms.Padding(2);
+			this.shop_email.Name = "shop_email";
+			this.shop_email.Size = new System.Drawing.Size(200, 20);
+			this.shop_email.TabIndex = 13;
 			// 
 			// label6
 			// 
@@ -181,7 +181,7 @@ namespace SampleShopClient
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(338, 177);
-			this.Controls.Add(this.email);
+			this.Controls.Add(this.shop_email);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.server_ip);
 			this.Controls.Add(this.shop_id);

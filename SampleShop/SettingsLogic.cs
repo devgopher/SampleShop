@@ -27,7 +27,7 @@ namespace SampleShopClient
 				shop_name.Text = CommonSettings.Config.AppSettings.Settings["shop_name"].Value;
 				shop_address.Text = CommonSettings.Config.AppSettings.Settings["shop_address"].Value;
 				shop_phone.Text = CommonSettings.Config.AppSettings.Settings["shop_phone"].Value;
-				email.Text = CommonSettings.Config.AppSettings.Settings["shop_email"].Value;
+				shop_email.Text = CommonSettings.Config.AppSettings.Settings["shop_email"].Value;
 				
 				if ( CommonSettings.Config.AppSettings.Settings["shop_id"] != null )
 					shop_id.Text = CommonSettings.Config.AppSettings.Settings["shop_id"].Value;
@@ -38,6 +38,9 @@ namespace SampleShopClient
 			}
 		}
 		
+		/// <summary>
+		/// Saves new settings
+		/// </summary>
 		private void Save() {
 			try {
 				CommonSettings.Config.AppSettings.Settings.Remove("server_ip");
@@ -50,7 +53,7 @@ namespace SampleShopClient
 				CommonSettings.Config.AppSettings.Settings.Add("shop_name", shop_name.Text.Trim());
 				CommonSettings.Config.AppSettings.Settings.Add("shop_address", shop_address.Text.Trim());
 				CommonSettings.Config.AppSettings.Settings.Add("shop_phone", shop_phone.Text.Trim());
-				CommonSettings.Config.AppSettings.Settings.Add("shop_email", email.Text.Trim());
+				CommonSettings.Config.AppSettings.Settings.Add("shop_email", shop_email.Text.Trim());
 
 				CommonSettings.Config.Save(ConfigurationSaveMode.Modified);
 				ConfigurationManager.RefreshSection("appSettings");
