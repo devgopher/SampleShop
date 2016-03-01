@@ -74,9 +74,5 @@ namespace SampleShopServer
 			
 			return ret;
 		}
-		
-		public ClientMessage() {
-			
-		}
 	}
 }

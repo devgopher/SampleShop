@@ -14,6 +14,10 @@ namespace SampleShopServer
 		public List<Dictionary<string, string>> Contents =
 			new List<Dictionary<string, string>>();
 		
+		/// <summary>
+		/// Adds an item to a Contents list
+		/// </summary>
+		/// <returns></returns>
 		public Dictionary<string, string> AddItem() {
 			var new_item_dict = new Dictionary<string, string>();
 			Contents.Add( new_item_dict );
@@ -26,21 +30,17 @@ namespace SampleShopServer
 		/// <param name="in_contents"></param>
 		public override void FromXML( string in_contents ) {
 			try {
-				XmlDocument doc = new XmlDocument();
-				doc.LoadXml( in_contents );
-				
-				var root_element = doc.DocumentElement;
-				
+				var doc = new XmlDocument();
+				doc.LoadXml( in_contents );				
+				var root_element = doc.DocumentElement;				
 				Contents.Clear();
 				
-				XmlNode item_node = null;
-				
+				XmlNode item_node = null;				
 				Dictionary<string, string> item_dict = null;
 				
 				foreach( XmlNode node in root_element.ChildNodes ) {
-					if ( node.Name == "type" ) {
+					if ( node.Name == "type" ) 
 						Type = node.InnerText;
-					}
 					
 					if ( node.Name == "item" ) {
 						item_node = node;
@@ -95,8 +95,7 @@ namespace SampleShopServer
 				root_elem.AppendChild( item );
 			}
 			
-			ret = root_elem.OuterXml;
-			
+			ret = root_elem.OuterXml;			
 			return ret;
 		}
 	}

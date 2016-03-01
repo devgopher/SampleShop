@@ -33,10 +33,11 @@ namespace TestServer
 			hw.KeepAlive = true;
 			hw.ContentLength = xml_bytes.Length;
 			var hw_stream = hw.GetRequestStream();
-			hw_stream.Write( xml_bytes, 0, xml_bytes.Length );		
+			hw_stream.Write( xml_bytes, 0, xml_bytes.Length );
 			hw_stream.Close();
-
-			System.Threading.Thread.Sleep(1000);
+			
+			while (!hw.HaveResponse) {
+			}
 			
 			HttpWebResponse resp = (HttpWebResponse)hw.GetResponse();
 
@@ -51,8 +52,9 @@ namespace TestServer
 			var resp_string = Encoding.UTF8.GetString( resp_buffer );
 			
 			Console.WriteLine("Respond: "+resp_string);
+			
 		}
-	
+		
 		public static void TestQuery() {
 			DatabaseInteraction db = new DatabaseInteraction();
 			var ret = db.ExecuteSelect("select * from \"Shops\"");
@@ -61,7 +63,7 @@ namespace TestServer
 				Console.WriteLine("Table name: "+tbl.TableName);
 				Console.WriteLine("Table cols count: "+tbl.Columns.Count);
 				Console.WriteLine("Table rows count: "+tbl.Rows.Count);
-			}			
+			}
 		}
 	}
 }

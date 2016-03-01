@@ -32,7 +32,8 @@ namespace SampleShopClient
 				foreach ( var good_pars in goods.Contents ) {
 					foreach ( var shop_pars in shops.Contents ) {
 						int row_index = shops_and_goodies.Rows.Add();
-						if ( good_pars["shop_id"].Equals( shop_pars["shop_id"] )  && Int64.Parse(shop_pars["shop_id"]) != current_shop_id ) {
+						if ( good_pars["shop_id"].Equals( shop_pars["shop_id"] )  &&
+						    Int64.Parse(shop_pars["shop_id"]) != CommonSettings.CurrentShopId ) {
 							shops_and_goodies.Rows[row_index].Cells["GoodName"].Value = good_pars["good_name"];
 							shops_and_goodies.Rows[row_index].Cells["GoodQuantity"].Value = good_pars["good_count"];
 							shops_and_goodies.Rows[row_index].Cells["ShopName"].Value = good_pars["shop_name"];

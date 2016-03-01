@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace SampleShopServer
 {
 	/// <summary>
-	/// Description of Protocol
+	/// SimpleShop protocol messages
 	/// </summary>
 	public static class Protocol
 	{
@@ -28,9 +28,5 @@ namespace SampleShopServer
 		public const string success_response = "SUCCRESP";
 		public const string error_response = "ERRRESP";
 		#endregion
-		
-		static Protocol()
-		{
-		}
 	}
 }

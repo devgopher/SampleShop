@@ -144,7 +144,7 @@ namespace SampleShopServer
 		public static ServerMessage ProcessMessage( ClientMessage msg ) {
 			try {
 				DataTable process_dt = null;
-				ServerMessage resp_msg = new ServerMessage();
+				var resp_msg = new ServerMessage();
 				
 				switch( msg.Type ) {
 					case Protocol.add_shop:
@@ -177,14 +177,14 @@ namespace SampleShopServer
 		}
 		
 		public static ServerMessage ResponseMessage( bool success ) {
-			ServerMessage resp_msg = new ServerMessage();
+			var resp_msg = new ServerMessage();
 			resp_msg.Type = Protocol.success_response;
 			resp_msg.AddItem()["result"] = success.ToString();			
 			return resp_msg;
 		}
 		
 		public static ServerMessage ResponseMessage( DataTable input_dt ) {
-			ServerMessage resp_msg = new ServerMessage();
+			var resp_msg = new ServerMessage();
 			resp_msg.Type = Protocol.common_response;
 			
 			foreach ( DataRow row in input_dt.Rows ) {

@@ -262,27 +262,5 @@ namespace SampleShopServer.Server
 
 			Status = ServerStatus.OFF;
 		}
-
-		/// <summary>
-		/// Checks availability of a host
-		/// </summary>
-		/// <param name="host">Host</param>
-		/// <param name="delay">Delay, ms</param>
-		/// <returns></returns>
-		private bool IsAvailable(string host, int delay)
-		{
-			// TODO: send request
-			Thread.Sleep(delay);
-			// TODO: do we have any response?
-
-			return false;
-		}
-
-		/// <summary>
-		/// Checks availability of all hosts by sending special requests
-		/// </summary>
-		private void CheckAvailability()
-		{
-		}
 	}
 }

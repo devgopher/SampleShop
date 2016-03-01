@@ -16,11 +16,6 @@ namespace SampleShopClient
 	public partial class OtherShops : Form
 	{
 		readonly Int64 good_id = 0;
-		Int64 current_shop_id = 0;		
-		
-		public void GetShopId() {
-			current_shop_id = Int64.Parse(Settings.config.AppSettings.Settings["shop_id"].Value);
-		}
 		
 		public OtherShops( Int64 _good_id  )
 		{
