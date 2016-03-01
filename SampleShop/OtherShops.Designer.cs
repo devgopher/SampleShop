@@ -19,6 +19,10 @@ namespace SampleShopClient
 		private System.Windows.Forms.DataGridViewTextBoxColumn shop_phone;
 		private System.Windows.Forms.DataGridViewTextBoxColumn shop_email;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ShopAddress;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ShopPhone;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ShopEmail;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -42,13 +46,13 @@ namespace SampleShopClient
 		private void InitializeComponent()
 		{
 			this.shops_and_goodies = new System.Windows.Forms.DataGridView();
-			this.button2 = new System.Windows.Forms.Button();
 			this.GoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.GoodQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shop_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shop_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shop_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.shop_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ShopAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ShopPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ShopEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.button2 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.shops_and_goodies)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -61,26 +65,17 @@ namespace SampleShopClient
 			this.shops_and_goodies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
 			this.GoodName,
 			this.GoodQuantity,
-			this.shop_name,
-			this.shop_address,
-			this.shop_phone,
-			this.shop_email});
+			this.ShopName,
+			this.ShopAddress,
+			this.ShopPhone,
+			this.ShopEmail});
 			this.shops_and_goodies.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.shops_and_goodies.Location = new System.Drawing.Point(12, 12);
+			this.shops_and_goodies.Location = new System.Drawing.Point(16, 15);
+			this.shops_and_goodies.Margin = new System.Windows.Forms.Padding(4);
 			this.shops_and_goodies.MultiSelect = false;
 			this.shops_and_goodies.Name = "shops_and_goodies";
-			this.shops_and_goodies.Size = new System.Drawing.Size(607, 386);
+			this.shops_and_goodies.Size = new System.Drawing.Size(809, 475);
 			this.shops_and_goodies.TabIndex = 3;
-			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(11, 403);
-			this.button2.Margin = new System.Windows.Forms.Padding(2);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(108, 21);
-			this.button2.TabIndex = 4;
-			this.button2.Text = "Обновить инфо";
-			this.button2.UseVisualStyleBackColor = true;
 			// 
 			// GoodName
 			// 
@@ -88,7 +83,7 @@ namespace SampleShopClient
 			this.GoodName.HeaderText = "Название товара";
 			this.GoodName.Name = "GoodName";
 			this.GoodName.ReadOnly = true;
-			this.GoodName.Width = 110;
+			this.GoodName.Width = 138;
 			// 
 			// GoodQuantity
 			// 
@@ -96,40 +91,52 @@ namespace SampleShopClient
 			this.GoodQuantity.HeaderText = "Кол-во";
 			this.GoodQuantity.Name = "GoodQuantity";
 			this.GoodQuantity.ReadOnly = true;
-			this.GoodQuantity.Width = 66;
+			this.GoodQuantity.Width = 82;
 			// 
-			// shop_name
+			// ShopName
 			// 
-			this.shop_name.HeaderText = "Магазин";
-			this.shop_name.Name = "ShopName";
-			this.shop_name.ReadOnly = true;
+			this.ShopName.HeaderText = "Магазин";
+			this.ShopName.Name = "ShopName";
+			this.ShopName.ReadOnly = true;
 			// 
-			// shop_address
+			// ShopAddress
 			// 
-			this.shop_address.HeaderText = "Адрес";
-			this.shop_address.Name = "ShopAddress";
-			this.shop_address.ReadOnly = true;
+			this.ShopAddress.HeaderText = "Адрес";
+			this.ShopAddress.Name = "ShopAddress";
+			this.ShopAddress.ReadOnly = true;
 			// 
-			// shop_phone
+			// ShopPhone
 			// 
-			this.shop_phone.HeaderText = "Тел.";
-			this.shop_phone.Name = "ShopPhone";
-			this.shop_phone.ReadOnly = true;
+			this.ShopPhone.HeaderText = "Тел.";
+			this.ShopPhone.Name = "ShopPhone";
+			this.ShopPhone.ReadOnly = true;
 			// 
-			// shop_email
+			// ShopEmail
 			// 
-			this.shop_email.HeaderText = "Email";
-			this.shop_email.Name = "ShopEmail";
-			this.shop_email.ReadOnly = true;
+			this.ShopEmail.HeaderText = "Email";
+			this.ShopEmail.Name = "ShopEmail";
+			this.ShopEmail.ReadOnly = true;
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(15, 496);
+			this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(144, 26);
+			this.button2.TabIndex = 4;
+			this.button2.Text = "Обновить инфо";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// OtherShops
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(633, 435);
+			this.ClientSize = new System.Drawing.Size(844, 535);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.shops_and_goodies);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "OtherShops";
 			this.Text = "Товары в других магазинах";
 			((System.ComponentModel.ISupportInitialize)(this.shops_and_goodies)).EndInit();

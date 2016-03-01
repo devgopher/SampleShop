@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="..\SampleShopServer\MessageProcessing\ClientMessage.cs">
       <Link>MessageProcessing\ClientMessage.cs</Link>
+      <DependentUpon>Message.cs</DependentUpon>
     </Compile>
     <Compile Include="..\SampleShopServer\MessageProcessing\Message.cs">
       <Link>MessageProcessing\Message.cs</Link>
@@ -72,6 +73,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormLogic.cs" />
     <Compile Include="OtherShops.cs" />
     <Compile Include="OtherShops.Designer.cs">
       <DependentUpon>OtherShops.cs</DependentUpon>

@@ -47,7 +47,7 @@ namespace SampleShopServer.Server
 		Socket server_socket;
 		const int server_port = 15000;
 		const int max_connections = 256;
-		const int buffer_capacity = 4096;
+		const int buffer_capacity = 100000;
 		Logger.Logger logger = Logger.Logger.GetInstance();
 
 		readonly ConcurrentBag<ConnectionInfo> connections =
@@ -177,14 +177,13 @@ namespace SampleShopServer.Server
 				logger.WriteEntry("Trying to process a connection...");
 				for (;;)
 				{
-					int bytes_read = conn_info.socket.Receive(buffer);
-
+					int bytes_read = 0;
+					bytes_read = conn_info.socket.Receive(buffer);
+					
 					if ( bytes_read > 0 )
 					{
 						string received = Encoding.UTF8.GetString(buffer);
-						
 						var server_msg = this.ProcessRequest( received );
-						
 						
 						foreach ( var ci in connections )
 						{

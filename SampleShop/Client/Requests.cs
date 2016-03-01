@@ -39,6 +39,24 @@ namespace SampleShopClient
 		}
 		
 		/// <summary>
+		/// Modifying an info about a shop
+		/// </summary>
+		/// <returns>Server message</returns>
+		public static void ModShop() {
+			try {
+				var new_cm = new ClientMessage();
+				new_cm.Type = Protocol.mod_shop;
+				new_cm.Contents["shop_name"] = config.AppSettings.Settings["shop_name"].Value;
+				new_cm.Contents["shop_phone"] = config.AppSettings.Settings["shop_phone"].Value;
+				new_cm.Contents["shop_address"] = config.AppSettings.Settings["shop_address"].Value;
+				new_cm.Contents["shop_email"] = config.AppSettings.Settings["shop_email"].Value;
+			 	RequestMessaging.Process( new_cm );
+			} catch ( Exception ex ) {
+				throw new SampleShopClientException( "Ошибка получения ID:"+ex.Message, ex );
+			}
+		}
+		
+		/// <summary>
 		/// Getting a list of shops
 		/// </summary>
 		/// <returns>Server message</returns>

@@ -20,5 +20,13 @@ namespace SampleShopClient
 			InitializeComponent();
 			good_id = _good_id;
 		}
+		void Button2Click(object sender, EventArgs e)
+		{
+	
+		}
+		void OtherShopsLoad(object sender, EventArgs e)
+		{
+	
+		}
 	}
 }

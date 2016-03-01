@@ -19,6 +19,7 @@ namespace SampleShopClient
 		{
 			InitializeComponent();
 		}
+		
 		void SettingsClick(object sender, EventArgs e)
 		{
 			var settings_form = new Settings();
@@ -50,13 +51,18 @@ namespace SampleShopClient
 			Int32 new_good_cnt = -1;
 			Int64 good_id = -1;
 			
-			if (  sender_grid.Columns[e.ColumnIndex].Name == "GoodQuantity") {
-				if (  Int32.TryParse(selected_row.Cells["GoodQuantity"].Value.ToString(), out new_good_cnt) &&
+			if ( sender_grid.Columns[e.ColumnIndex].Name == "GoodQuantity") {
+				if ( Int32.TryParse(selected_row.Cells["GoodQuantity"].Value.ToString(), out new_good_cnt) &&
 				    Int64.TryParse(selected_row.Cells["GoodId"].Value.ToString(), out good_id))
 				{
 					Requests.UpdateGoodsCount( good_id, new_good_cnt );
 				}
 			}
+		}
+		
+		void UpdateInfoClick(object sender, EventArgs e)
+		{
+			UpdateInfo();
 		}
 	}
 }

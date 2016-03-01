@@ -18,7 +18,7 @@ namespace SampleShopClient
 	{
 		private static string server_ip =
 			CommonSettings.Config.AppSettings.Settings["server_ip"].Value;
-		private const int max_ba_length = 1048576;
+		private const int max_ba_length = 100000;
 		
 		/// <summary>
 		/// A method for sending of the client message and receiving server message
@@ -44,7 +44,7 @@ namespace SampleShopClient
 		private static string GetResponseText( HttpWebResponse response ) {
 			var resp_stream = response.GetResponseStream();
 			var rec_bytes = new byte[max_ba_length];
-			resp_stream.Read( rec_bytes, 0, (int)response.ContentLength );
+			resp_stream.Read( rec_bytes, 0, max_ba_length );
 			return Encoding.UTF8.GetString( rec_bytes );
 		}
 		
@@ -103,13 +103,7 @@ namespace SampleShopClient
 		/// <param name="web_request">Request</param>
 		/// <param name="timeout">Timeout, sec</param>
 		/// <returns>Server response</returns>
-		private static HttpWebResponse GetResponse( HttpWebRequest web_request, int timeout = 20 ) {
-			DateTime dt_now = DateTime.Now;
-			while (!web_request.HaveResponse) {
-				if ( (DateTime.Now - dt_now).TotalSeconds >= timeout ) {
-					throw new SampleShopClientException( "Timeout expired while waiting for a server response! " );
-				}
-			}
+		private static HttpWebResponse GetResponse( HttpWebRequest web_request ) {
 			return (HttpWebResponse)web_request.GetResponse();
 		}
 	}

@@ -62,11 +62,16 @@ namespace SampleShopClient
 				// если наш магазин еще не занесен в БД на сервере и у нас нет ID,
 				// сделаем соотв. запрос...
 				if ( shop_id.Text == "-1" ) {
-					Requests.AddShop();
+					var id_msg = Requests.AddShop();
+					if ( id_msg != null ) {
+						CommonSettings.Config.AppSettings.Settings.Remove("shop_id");
+						CommonSettings.Config.AppSettings.Settings.Add("shop_id", (id_msg.Contents[0])["shop_id"].ToString());
+						CommonSettings.Config.Save(ConfigurationSaveMode.Modified);
+						ConfigurationManager.RefreshSection("appSettings");
+					}
+				} else {
+					Requests.ModShop();
 				}
-				
-				CommonSettings.Config.Save(ConfigurationSaveMode.Modified);
-				ConfigurationManager.RefreshSection("appSettings");
 			} catch ( Exception ex ) {
 				MessageBox.Show(ex.Message);
 			}

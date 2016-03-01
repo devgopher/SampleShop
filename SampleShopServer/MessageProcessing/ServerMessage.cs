@@ -31,31 +31,32 @@ namespace SampleShopServer
 		public override void FromXML( string in_contents ) {
 			try {
 				var doc = new XmlDocument();
-				doc.LoadXml( in_contents );				
-				var root_element = doc.DocumentElement;				
+				doc.LoadXml( in_contents );
+				var root_element = doc.DocumentElement;
 				Contents.Clear();
 				
-				XmlNode item_node = null;				
+				XmlNode item_node = null;
 				Dictionary<string, string> item_dict = null;
 				
 				foreach( XmlNode node in root_element.ChildNodes ) {
-					if ( node.Name == "type" ) 
+					if ( node.Name == "type" )
 						Type = node.InnerText;
 					
 					if ( node.Name == "item" ) {
 						item_node = node;
 						item_dict = new Dictionary<string, string>();
 						Contents.Add( item_dict );
-						break;
-					}
-					
-					if ( node.Name == "field" && item_node != null && item_dict != null) {
-						// seeking for attributes
-						var node_attrs = node.Attributes;
-						if (  node_attrs != null ) {
-							// filling Contents dictionary
-							if (node_attrs["field_name"] != null && node.InnerText != null )
-								item_dict[node_attrs["field_name"].Value] = node.InnerText;
+						
+						foreach ( XmlNode field_node in item_node.ChildNodes ) {
+							if ( field_node.Name == "field" && item_node != null && item_dict != null) {
+								// seeking for attributes
+								var node_attrs = field_node.Attributes;
+								if (  node_attrs != null ) {
+									// filling Contents dictionary
+									if (node_attrs["field_name"] != null && field_node.InnerText != null )
+										item_dict[node_attrs["field_name"].Value] = field_node.InnerText;
+								}
+							}
 						}
 					}
 				}
@@ -95,7 +96,7 @@ namespace SampleShopServer
 				root_elem.AppendChild( item );
 			}
 			
-			ret = root_elem.OuterXml;			
+			ret = root_elem.OuterXml;
 			return ret;
 		}
 	}

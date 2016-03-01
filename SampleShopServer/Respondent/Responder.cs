@@ -8,7 +8,8 @@ namespace SampleShopServer
 	{
 		private static Logger.Logger logger = Logger.Logger.GetInstance();
 
-		public static void Respond(Server.ConnectionInfo conn_info, string content )
+		public static void Respond( Server.ConnectionInfo conn_info,
+		                           string content )
 		{
 			int content_length = content.Length;
 
@@ -17,9 +18,18 @@ namespace SampleShopServer
 				"Content-Type: text/xml\r\n\r\n" +
 				content+"\r\n\r\n";
 
-			logger.WriteEntry("Sending a response: " + resp_main);
-			conn_info.socket.Send(Encoding.ASCII.GetBytes(resp_main));
-			logger.WriteEntry("READY");
+			try {
+				logger.WriteEntry("Sending a response: " + resp_main);
+				conn_info.socket.SendTimeout = 500;
+				
+				conn_info.socket.Send(Encoding.UTF8.GetBytes(resp_main));
+
+				logger.WriteEntry("READY");
+			} catch ( Exception ex ) {
+				logger.WriteError("Error while sending response: "+ex.Message);
+			} finally {
+				conn_info.socket.Disconnect(true);
+			}
 		}
 	}
 }
