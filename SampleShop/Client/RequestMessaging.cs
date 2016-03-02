@@ -56,8 +56,6 @@ namespace SampleShopClient
 		/// <param name="contents">A text of response</param>
 		/// <returns>ServerMessage</returns>
 		private static ServerMessage ProcessResponseText( string contents ) {
-			if ( contents != String.Empty )
-				System.Windows.Forms.Clipboard.SetText( contents );
 			if ( contents.Contains("<root>") &&
 			    contents.Contains("</root>"))
 			{
