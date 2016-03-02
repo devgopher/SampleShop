@@ -45,10 +45,9 @@ namespace SampleShopClient
 			var rec_bytes = new byte[max_ba_length];
 			string ret = String.Empty;
 
-			while (resp_stream.Read( rec_bytes, 0, 10000 ) > 0 ) {
-				ret += Encoding.UTF8.GetString( rec_bytes );
-			}
-			return ret.Replace("\0","");
+			StreamReader resp_sr = new StreamReader( resp_stream );
+			
+			return resp_sr.ReadToEnd().Replace("\0","");
 		}
 		
 		/// <summary>
