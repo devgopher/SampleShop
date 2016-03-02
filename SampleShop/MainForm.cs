@@ -60,7 +60,11 @@ namespace SampleShopClient
 		
 		void UpdateInfoClick(object sender, EventArgs e)
 		{
-			UpdateInfo();
+			try {
+				UpdateInfo();
+			} catch ( Exception ex ) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }
