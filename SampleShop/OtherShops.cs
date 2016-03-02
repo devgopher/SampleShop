@@ -22,11 +22,12 @@ namespace SampleShopClient
 		}
 		void Button2Click(object sender, EventArgs e)
 		{
-	
+			UpdateInfo();
 		}
+		
 		void OtherShopsLoad(object sender, EventArgs e)
 		{
-	
+			UpdateInfo();
 		}
 	}
 }

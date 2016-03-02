@@ -19,23 +19,18 @@ namespace SampleShopClient
 		/// Updates an information in datagrid
 		/// </summary>
 		private void UpdateInfo() {
-			ServerMessage goods = Requests.GetGoods();
-			goods = Requests.GetGoods();
-			ServerMessage shops = Requests.GetShops();
 			
-			
+			ServerMessage goods_cnt = Requests.GetGoodsQuantity();
+			goods_cnt = Requests.GetGoodsQuantity();
 			current_shop_goodies.Rows.Clear();
 			
-			if ( goods != null && shops != null ) {
-				foreach ( var good_pars in goods.Contents ) {
-					foreach ( var shop_pars in shops.Contents ) {
-						if ( good_pars["shop_id"] == shop_pars["shop_id"]  &&
-						    shop_pars["shop_id"] == CommonSettings.CurrentShopId.ToString()) {
-							int row_index = current_shop_goodies.Rows.Add();
-							current_shop_goodies.Rows[row_index].Cells[GoodName.Name].Value = good_pars["good_name"];
-							current_shop_goodies.Rows[row_index].Cells[GoodId.Name].Value = good_pars["good_id"];
-							current_shop_goodies.Rows[row_index].Cells[GoodQuantity.Name].Value = good_pars["good_count"];
-						}
+			if ( goods_cnt  != null ) {
+				foreach ( var gc_pars in goods_cnt.Contents ) {
+					if ( gc_pars["shop_id"] == CommonSettings.CurrentShopId.ToString()) {
+						int row_index = current_shop_goodies.Rows.Add();
+						current_shop_goodies.Rows[row_index].Cells[GoodName.Name].Value = gc_pars["good_name"];
+						current_shop_goodies.Rows[row_index].Cells[GoodId.Name].Value = gc_pars["good_id"];
+						current_shop_goodies.Rows[row_index].Cells[GoodQuantity.Name].Value = gc_pars["good_count"];
 					}
 				}
 			}

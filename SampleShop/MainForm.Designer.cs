@@ -52,10 +52,10 @@ namespace SampleShopClient
 			// 
 			// settings
 			// 
-			this.settings.Location = new System.Drawing.Point(1, 447);
-			this.settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.settings.Location = new System.Drawing.Point(1, 363);
+			this.settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.settings.Name = "settings";
-			this.settings.Size = new System.Drawing.Size(103, 26);
+			this.settings.Size = new System.Drawing.Size(77, 21);
 			this.settings.TabIndex = 0;
 			this.settings.Text = "Настройки";
 			this.settings.UseVisualStyleBackColor = true;
@@ -63,12 +63,12 @@ namespace SampleShopClient
 			// 
 			// update_info
 			// 
-			this.update_info.Location = new System.Drawing.Point(109, 447);
-			this.update_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.update_info.Location = new System.Drawing.Point(82, 363);
+			this.update_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.update_info.Name = "update_info";
-			this.update_info.Size = new System.Drawing.Size(144, 26);
+			this.update_info.Size = new System.Drawing.Size(108, 21);
 			this.update_info.TabIndex = 1;
-			this.update_info.Text = "Обновить инфо";
+			this.update_info.Text = "Загрузить инфо";
 			this.update_info.UseVisualStyleBackColor = true;
 			this.update_info.Click += new System.EventHandler(this.UpdateInfoClick);
 			// 
@@ -85,10 +85,9 @@ namespace SampleShopClient
 			this.GoodQuantity,
 			this.LookInOtherShops});
 			this.current_shop_goodies.Location = new System.Drawing.Point(1, 2);
-			this.current_shop_goodies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 			this.current_shop_goodies.MultiSelect = false;
 			this.current_shop_goodies.Name = "current_shop_goodies";
-			this.current_shop_goodies.Size = new System.Drawing.Size(809, 438);
+			this.current_shop_goodies.Size = new System.Drawing.Size(607, 356);
 			this.current_shop_goodies.TabIndex = 2;
 			this.current_shop_goodies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CurrentShopGoodiesCellContentClick);
 			this.current_shop_goodies.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CurrentShopGoodiesCellValueChanged);
@@ -99,7 +98,7 @@ namespace SampleShopClient
 			this.GoodName.HeaderText = "Название товара";
 			this.GoodName.Name = "GoodName";
 			this.GoodName.ReadOnly = true;
-			this.GoodName.Width = 138;
+			this.GoodName.Width = 110;
 			// 
 			// GoodId
 			// 
@@ -112,7 +111,7 @@ namespace SampleShopClient
 			this.GoodQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
 			this.GoodQuantity.HeaderText = "Кол-во";
 			this.GoodQuantity.Name = "GoodQuantity";
-			this.GoodQuantity.Width = 82;
+			this.GoodQuantity.Width = 66;
 			// 
 			// LookInOtherShops
 			// 
@@ -123,14 +122,14 @@ namespace SampleShopClient
 			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(813, 476);
+			this.ClientSize = new System.Drawing.Size(610, 387);
 			this.Controls.Add(this.current_shop_goodies);
 			this.Controls.Add(this.update_info);
 			this.Controls.Add(this.settings);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "MainForm";
 			this.Text = "SampleShop";
 			((System.ComponentModel.ISupportInitialize)(this.current_shop_goodies)).EndInit();

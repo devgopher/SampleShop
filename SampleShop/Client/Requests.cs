@@ -48,7 +48,7 @@ namespace SampleShopClient
 				new_cm.Contents["shop_phone"] = config.AppSettings.Settings["shop_phone"].Value;
 				new_cm.Contents["shop_address"] = config.AppSettings.Settings["shop_address"].Value;
 				new_cm.Contents["shop_email"] = config.AppSettings.Settings["shop_email"].Value;
-			 	RequestMessaging.Process( new_cm );
+				RequestMessaging.Process( new_cm );
 			} catch ( Exception ex ) {
 				throw new SampleShopClientException( "Ошибка получения ID:"+ex.Message, ex );
 			}
@@ -76,6 +76,20 @@ namespace SampleShopClient
 			try {
 				var cm_goods = new ClientMessage();
 				cm_goods.Type = Protocol.get_good_list;
+				return RequestMessaging.Process( cm_goods );
+			} catch ( Exception ex ) {
+				throw new SampleShopClientException( "Ошибка получения списка товаров:"+ex.Message, ex );
+			}
+		}
+		
+		/// <summary>
+		/// Getting quantities of goodies
+		/// </summary>
+		/// <returns>Server message</returns>
+		public static ServerMessage GetGoodsQuantity() {
+			try {
+				var cm_goods = new ClientMessage();
+				cm_goods.Type = Protocol.get_good_quantity;
 				return RequestMessaging.Process( cm_goods );
 			} catch ( Exception ex ) {
 				throw new SampleShopClientException( "Ошибка получения списка товаров:"+ex.Message, ex );

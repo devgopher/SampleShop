@@ -66,11 +66,10 @@ namespace SampleShopClient
 			this.ShopPhone,
 			this.ShopEmail});
 			this.shops_and_goodies.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.shops_and_goodies.Location = new System.Drawing.Point(16, 15);
-			this.shops_and_goodies.Margin = new System.Windows.Forms.Padding(4);
+			this.shops_and_goodies.Location = new System.Drawing.Point(12, 12);
 			this.shops_and_goodies.MultiSelect = false;
 			this.shops_and_goodies.Name = "shops_and_goodies";
-			this.shops_and_goodies.Size = new System.Drawing.Size(809, 475);
+			this.shops_and_goodies.Size = new System.Drawing.Size(607, 386);
 			this.shops_and_goodies.TabIndex = 3;
 			// 
 			// GoodName
@@ -79,7 +78,7 @@ namespace SampleShopClient
 			this.GoodName.HeaderText = "Название товара";
 			this.GoodName.Name = "GoodName";
 			this.GoodName.ReadOnly = true;
-			this.GoodName.Width = 138;
+			this.GoodName.Width = 110;
 			// 
 			// GoodQuantity
 			// 
@@ -87,7 +86,7 @@ namespace SampleShopClient
 			this.GoodQuantity.HeaderText = "Кол-во";
 			this.GoodQuantity.Name = "GoodQuantity";
 			this.GoodQuantity.ReadOnly = true;
-			this.GoodQuantity.Width = 82;
+			this.GoodQuantity.Width = 66;
 			// 
 			// ShopName
 			// 
@@ -115,10 +114,10 @@ namespace SampleShopClient
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(15, 496);
-			this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.button2.Location = new System.Drawing.Point(11, 403);
+			this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(144, 26);
+			this.button2.Size = new System.Drawing.Size(108, 21);
 			this.button2.TabIndex = 4;
 			this.button2.Text = "Обновить инфо";
 			this.button2.UseVisualStyleBackColor = true;
@@ -126,15 +125,15 @@ namespace SampleShopClient
 			// 
 			// OtherShops
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(844, 535);
+			this.ClientSize = new System.Drawing.Size(633, 435);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.shops_and_goodies);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "OtherShops";
 			this.Text = "Товары в других магазинах";
+			this.Load += new System.EventHandler(this.OtherShopsLoad);
 			((System.ComponentModel.ISupportInitialize)(this.shops_and_goodies)).EndInit();
 			this.ResumeLayout(false);
 

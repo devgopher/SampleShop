@@ -63,6 +63,25 @@ namespace SampleShopServer
 			return null;
 		}
 		
+		private static DataTable SelectGoodsQuantity( ClientMessage msg ) {
+			string query = "SELECT * FROM \"GoodsQuantity\"";
+			
+			try {
+				var dbint = new Model.DatabaseInteraction();
+				dbint.Connection.Open();
+				var ds = dbint.ExecuteSelect( query );
+				
+				if ( ds.Tables.Count > 0 ) {
+					dbint.Connection.Close();
+					return ds.Tables[0];
+				} else
+					dbint.Connection.Close();
+			} catch ( Exception ex ) {
+				logger.WriteError( "Error while selecting record: "+ex.Message );
+			}
+			return null;
+		}
+		
 		private static bool AddGoodsCountRequest( ClientMessage msg ) {
 			string query = "INSERT INTO \"GoodsInShops\" ( id, \"Count\", \"Shop_id\", \"Good_id\") " +
 				" VALUES ((SELECT max(id) + 1 FROM \"GoodsInShops\"), "+msg.Contents["quantity"]+
@@ -179,7 +198,10 @@ namespace SampleShopServer
 						if ( upd_succ == false )
 							upd_succ = AddGoodsCountRequest( msg );
 						
-						resp_msg = ResponseMessage( upd_succ );						
+						resp_msg = ResponseMessage( upd_succ );
+						return resp_msg;
+					case Protocol.get_good_quantity:
+						resp_msg = ResponseMessage( SelectGoodsQuantity( msg ) );
 						return resp_msg;
 					case Protocol.mod_shop:
 						resp_msg = ResponseMessage( UpdateShopRequest( msg ) );
@@ -205,7 +227,7 @@ namespace SampleShopServer
 		public static ServerMessage ResponseMessage( bool success ) {
 			var resp_msg = new ServerMessage();
 			resp_msg.Type = Protocol.success_response;
-			resp_msg.AddItem()["result"] = success.ToString();			
+			resp_msg.AddItem()["result"] = success.ToString();
 			return resp_msg;
 		}
 		

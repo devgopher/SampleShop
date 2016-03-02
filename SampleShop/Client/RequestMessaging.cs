@@ -44,8 +44,7 @@ namespace SampleShopClient
 			var resp_stream = response.GetResponseStream();
 			var rec_bytes = new byte[max_ba_length];
 			string ret = String.Empty;
-
-			StreamReader resp_sr = new StreamReader( resp_stream );
+			var resp_sr = new StreamReader( resp_stream );
 			
 			return resp_sr.ReadToEnd().Replace("\0","");
 		}
