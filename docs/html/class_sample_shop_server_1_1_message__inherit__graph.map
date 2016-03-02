@@ -1,0 +1,4 @@
+<map id="SampleShopServer.Message" name="SampleShopServer.Message">
+<area shape="rect" id="node3" href="$class_sample_shop_server_1_1_client_message.html" title="{SampleShopServer.ClientMessage\n|+ Contents\l|+ FromXML()\l+ ToXml()\l}" alt="" coords="5,154,248,246"/>
+<area shape="rect" id="node5" href="$class_sample_shop_server_1_1_server_message.html" title="{SampleShopServer.ServerMessage\n|+ Contents\l|+ AddItem()\l+ FromXML()\l+ ToXml()\l}" alt="" coords="273,147,521,253"/>
+</map>

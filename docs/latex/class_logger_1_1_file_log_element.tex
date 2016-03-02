@@ -1,0 +1,189 @@
+\hypertarget{class_logger_1_1_file_log_element}{}\section{Класс Logger.\+File\+Log\+Element}
+\label{class_logger_1_1_file_log_element}\index{Logger.\+File\+Log\+Element@{Logger.\+File\+Log\+Element}}
+
+
+This class provides file logging functions  
+
+
+
+
+Граф наследования\+:Logger.\+File\+Log\+Element\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_logger_1_1_file_log_element__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Logger.\+File\+Log\+Element\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_logger_1_1_file_log_element__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \hyperlink{class_logger_1_1_file_log_element_a8c411673dca056803a65363a8a64e1f7}{Output} (string input, string msg\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Outputs content \end{DoxyCompactList}\item 
+override void \hyperlink{class_logger_1_1_file_log_element_aa5ec6e083f5ed5f08e56971efa676833}{Output} (string input, string msg\+\_\+type, params object\mbox{[}$\,$\mbox{]} pars)
+\begin{DoxyCompactList}\small\item\em Outputs content \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_logger_1_1_file_log_element}{File\+Log\+Element} \hyperlink{class_logger_1_1_file_log_element_a75b9c7ef3c4e5d5208666ce643a9279e}{Get\+Instance} (params object\mbox{[}$\,$\mbox{]} pars)
+\begin{DoxyCompactList}\small\item\em Getting a File\+Log\+Element instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Статические защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+static Dictionary$<$ String, \hyperlink{class_logger_1_1_file_log_element}{File\+Log\+Element} $>$ \hyperlink{class_logger_1_1_file_log_element_af0766c885340c7b7efd913e6c0506da9}{instances}
+\end{DoxyCompactItemize}
+\subsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+Encoding \hyperlink{class_logger_1_1_file_log_element_a117b230e3fdc8707b3d9291d46627a74}{Use\+Encoding}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+String \hyperlink{class_logger_1_1_file_log_element_acaa405b2fa63d634684900980a2b7821}{Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Дополнительные унаследованные члены}
+
+
+\subsection{Подробное описание}
+This class provides file logging functions 
+
+
+
+\subsection{Методы}
+\hypertarget{class_logger_1_1_file_log_element_a75b9c7ef3c4e5d5208666ce643a9279e}{}\index{Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}!Get\+Instance@{Get\+Instance}}
+\index{Get\+Instance@{Get\+Instance}!Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}}
+\subsubsection[{Get\+Instance(params object[] pars)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf File\+Log\+Element} Logger.\+File\+Log\+Element.\+Get\+Instance (
+\begin{DoxyParamCaption}
+\item[{params object\mbox{[}$\,$\mbox{]}}]{pars}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_logger_1_1_file_log_element_a75b9c7ef3c4e5d5208666ce643a9279e}
+
+
+Getting a File\+Log\+Element instance 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em pars} & Params array ( Encoding, Path )\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Log element
+\end{DoxyReturn}
+
+
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_logger_1_1_file_log_element_a75b9c7ef3c4e5d5208666ce643a9279e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_logger_1_1_file_log_element_a8c411673dca056803a65363a8a64e1f7}{}\index{Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}!Output@{Output}}
+\index{Output@{Output}!Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}}
+\subsubsection[{Output(string input, string msg\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}override void Logger.\+File\+Log\+Element.\+Output (
+\begin{DoxyParamCaption}
+\item[{string}]{input, }
+\item[{string}]{msg\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_logger_1_1_file_log_element_a8c411673dca056803a65363a8a64e1f7}
+
+
+Outputs content 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em input} & \\
+\hline
+{\em msg\+\_\+type} & \\
+\hline
+\end{DoxyParams}
+
+
+Замещает \hyperlink{class_logger_1_1_log_element_ac799aaceaba3a5c19ce100e3201b63f5}{Logger.\+Log\+Element}.
+
+
+
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_logger_1_1_file_log_element_a8c411673dca056803a65363a8a64e1f7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_logger_1_1_file_log_element_aa5ec6e083f5ed5f08e56971efa676833}{}\index{Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}!Output@{Output}}
+\index{Output@{Output}!Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}}
+\subsubsection[{Output(string input, string msg\+\_\+type, params object[] pars)}]{\setlength{\rightskip}{0pt plus 5cm}override void Logger.\+File\+Log\+Element.\+Output (
+\begin{DoxyParamCaption}
+\item[{string}]{input, }
+\item[{string}]{msg\+\_\+type, }
+\item[{params object\mbox{[}$\,$\mbox{]}}]{pars}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_logger_1_1_file_log_element_aa5ec6e083f5ed5f08e56971efa676833}
+
+
+Outputs content 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em input} & Content for output\\
+\hline
+{\em msg\+\_\+type} & Message type\\
+\hline
+{\em pars} & Parameters array\\
+\hline
+\end{DoxyParams}
+
+
+Замещает \hyperlink{class_logger_1_1_log_element_aeab8fe7e6188f13e2617c8ac9d047f36}{Logger.\+Log\+Element}.
+
+
+
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_logger_1_1_file_log_element_aa5ec6e083f5ed5f08e56971efa676833_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Данные класса}
+\hypertarget{class_logger_1_1_file_log_element_af0766c885340c7b7efd913e6c0506da9}{}\index{Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}!instances@{instances}}
+\index{instances@{instances}!Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}}
+\subsubsection[{instances}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$String, {\bf File\+Log\+Element}$>$ Logger.\+File\+Log\+Element.\+instances\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_logger_1_1_file_log_element_af0766c885340c7b7efd913e6c0506da9}
+{\bfseries Инициализатор}
+\begin{DoxyCode}
+=
+                        \textcolor{keyword}{new} Dictionary<String, FileLogElement>()
+\end{DoxyCode}
+
+
+\subsection{Полный список свойств}
+\hypertarget{class_logger_1_1_file_log_element_acaa405b2fa63d634684900980a2b7821}{}\index{Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}!Path@{Path}}
+\index{Path@{Path}!Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}}
+\subsubsection[{Path}]{\setlength{\rightskip}{0pt plus 5cm}String Logger.\+File\+Log\+Element.\+Path\hspace{0.3cm}{\ttfamily [get]}}\label{class_logger_1_1_file_log_element_acaa405b2fa63d634684900980a2b7821}
+\hypertarget{class_logger_1_1_file_log_element_a117b230e3fdc8707b3d9291d46627a74}{}\index{Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}!Use\+Encoding@{Use\+Encoding}}
+\index{Use\+Encoding@{Use\+Encoding}!Logger\+::\+File\+Log\+Element@{Logger\+::\+File\+Log\+Element}}
+\subsubsection[{Use\+Encoding}]{\setlength{\rightskip}{0pt plus 5cm}Encoding Logger.\+File\+Log\+Element.\+Use\+Encoding\hspace{0.3cm}{\ttfamily [get]}}\label{class_logger_1_1_file_log_element_a117b230e3fdc8707b3d9291d46627a74}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Logger/\+Log\+Elements/\hyperlink{_file_log_element_8cs}{File\+Log\+Element.\+cs}\end{DoxyCompactItemize}

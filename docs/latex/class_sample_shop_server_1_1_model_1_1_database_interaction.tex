@@ -1,0 +1,113 @@
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction}{}\section{Класс Sample\+Shop\+Server.\+Model.\+Database\+Interaction}
+\label{class_sample_shop_server_1_1_model_1_1_database_interaction}\index{Sample\+Shop\+Server.\+Model.\+Database\+Interaction@{Sample\+Shop\+Server.\+Model.\+Database\+Interaction}}
+
+
+Description of Database.  
+
+
+
+
+Граф связей класса Sample\+Shop\+Server.\+Model.\+Database\+Interaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_sample_shop_server_1_1_model_1_1_database_interaction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_a68c474299b0b8960529079dbc703111e}{Database\+Interaction} ()
+\item 
+I\+Db\+Transaction \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_a8564c937b8c0a5368ba496b5228748d3}{Begin\+Transaction} ()
+\item 
+void \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_ae6a64c4a8d3cdaffc7ba8e9001673d45}{Commit\+Transaction} (I\+Db\+Transaction tr)
+\item 
+void \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_ad2efb89b79dcd8fe473bb169a46ea16a}{Rollback\+Transaction} (I\+Db\+Transaction tr)
+\item 
+Data\+Set \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_acafc2bc549b0f01271475a0d7fef747e}{Execute\+Select} (string query, I\+Db\+Transaction tr=null)
+\item 
+bool \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_a008c3a9df152ccb7291a4d6267193c74}{Execute\+Modify} (string query, I\+Db\+Transaction tr=null)
+\item 
+Int64 \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_a49ee1e3cd55abeb3b62de784664ef5dc}{Get\+Last\+Id} (string table\+\_\+name, I\+Db\+Transaction tr)
+\end{DoxyCompactItemize}
+\subsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+Npgsql\+Connection \hyperlink{class_sample_shop_server_1_1_model_1_1_database_interaction_a1d4f03db76711dec47dd9c51adee1f66}{Connection} User I\+D=\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Description of Database. 
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_a68c474299b0b8960529079dbc703111e}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Database\+Interaction@{Database\+Interaction}}
+\index{Database\+Interaction@{Database\+Interaction}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Database\+Interaction()}]{\setlength{\rightskip}{0pt plus 5cm}Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Database\+Interaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_a68c474299b0b8960529079dbc703111e}
+
+
+\subsection{Методы}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_a8564c937b8c0a5368ba496b5228748d3}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Begin\+Transaction@{Begin\+Transaction}}
+\index{Begin\+Transaction@{Begin\+Transaction}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Begin\+Transaction()}]{\setlength{\rightskip}{0pt plus 5cm}I\+Db\+Transaction Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Begin\+Transaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_a8564c937b8c0a5368ba496b5228748d3}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_ae6a64c4a8d3cdaffc7ba8e9001673d45}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Commit\+Transaction@{Commit\+Transaction}}
+\index{Commit\+Transaction@{Commit\+Transaction}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Commit\+Transaction(\+I\+Db\+Transaction tr)}]{\setlength{\rightskip}{0pt plus 5cm}void Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Commit\+Transaction (
+\begin{DoxyParamCaption}
+\item[{I\+Db\+Transaction}]{tr}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_ae6a64c4a8d3cdaffc7ba8e9001673d45}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_a008c3a9df152ccb7291a4d6267193c74}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Execute\+Modify@{Execute\+Modify}}
+\index{Execute\+Modify@{Execute\+Modify}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Execute\+Modify(string query, I\+Db\+Transaction tr=null)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Execute\+Modify (
+\begin{DoxyParamCaption}
+\item[{string}]{query, }
+\item[{I\+Db\+Transaction}]{tr = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_a008c3a9df152ccb7291a4d6267193c74}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_acafc2bc549b0f01271475a0d7fef747e}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Execute\+Select@{Execute\+Select}}
+\index{Execute\+Select@{Execute\+Select}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Execute\+Select(string query, I\+Db\+Transaction tr=null)}]{\setlength{\rightskip}{0pt plus 5cm}Data\+Set Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Execute\+Select (
+\begin{DoxyParamCaption}
+\item[{string}]{query, }
+\item[{I\+Db\+Transaction}]{tr = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_acafc2bc549b0f01271475a0d7fef747e}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_a49ee1e3cd55abeb3b62de784664ef5dc}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Get\+Last\+Id@{Get\+Last\+Id}}
+\index{Get\+Last\+Id@{Get\+Last\+Id}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Get\+Last\+Id(string table\+\_\+name, I\+Db\+Transaction tr)}]{\setlength{\rightskip}{0pt plus 5cm}Int64 Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Get\+Last\+Id (
+\begin{DoxyParamCaption}
+\item[{string}]{table\+\_\+name, }
+\item[{I\+Db\+Transaction}]{tr}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_a49ee1e3cd55abeb3b62de784664ef5dc}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_ad2efb89b79dcd8fe473bb169a46ea16a}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Rollback\+Transaction@{Rollback\+Transaction}}
+\index{Rollback\+Transaction@{Rollback\+Transaction}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Rollback\+Transaction(\+I\+Db\+Transaction tr)}]{\setlength{\rightskip}{0pt plus 5cm}void Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Rollback\+Transaction (
+\begin{DoxyParamCaption}
+\item[{I\+Db\+Transaction}]{tr}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_ad2efb89b79dcd8fe473bb169a46ea16a}
+
+
+\subsection{Полный список свойств}
+\hypertarget{class_sample_shop_server_1_1_model_1_1_database_interaction_a1d4f03db76711dec47dd9c51adee1f66}{}\index{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}!Connection@{Connection}}
+\index{Connection@{Connection}!Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction@{Sample\+Shop\+Server\+::\+Model\+::\+Database\+Interaction}}
+\subsubsection[{Connection}]{\setlength{\rightskip}{0pt plus 5cm}Npgsql\+Connection Sample\+Shop\+Server.\+Model.\+Database\+Interaction.\+Connection User I\+D=\char`\"{}\hspace{0.3cm}{\ttfamily [get]}}\label{class_sample_shop_server_1_1_model_1_1_database_interaction_a1d4f03db76711dec47dd9c51adee1f66}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Sample\+Shop\+Server/\+Model/\hyperlink{_database_interaction_8cs}{Database\+Interaction.\+cs}\end{DoxyCompactItemize}

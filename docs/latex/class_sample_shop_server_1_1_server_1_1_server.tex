@@ -1,0 +1,153 @@
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server}{}\section{Класс Sample\+Shop\+Server.\+Server.\+Server}
+\label{class_sample_shop_server_1_1_server_1_1_server}\index{Sample\+Shop\+Server.\+Server.\+Server@{Sample\+Shop\+Server.\+Server.\+Server}}
+
+
+A general logic of Sample\+Shop\+Server. The main idea is the next\+: this component is responsible for\+:  
+
+
+
+
+Граф связей класса Sample\+Shop\+Server.\+Server.\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_sample_shop_server_1_1_server_1_1_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые типы}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6b}{Server\+Status} \{ \hyperlink{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba90651ebea9a35ec4e018c8157492e17c}{Server\+Status.\+O\+N}, 
+\hyperlink{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba88559a0cfd8250c9d65970cc145c92d4}{Server\+Status.\+O\+F\+F}, 
+\hyperlink{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba802706a9238e2928077f97736854bad4}{Server\+Status.\+B\+U\+S\+Y}, 
+\hyperlink{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6babb1ca97ec761fc37101737ba0aa2e7c5}{Server\+Status.\+E\+R\+R\+O\+R}
+ \}\begin{DoxyCompactList}\small\item\em Server statuses \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sample_shop_server_1_1_server_1_1_server_a07d76048d77e7256ded3491bec8c7349}{Server} ()
+\item 
+void \hyperlink{class_sample_shop_server_1_1_server_1_1_server_a2b33d91f4e6c1ddb738e8edf35e4c6ad}{Setup\+Socket} ()
+\item 
+void \hyperlink{class_sample_shop_server_1_1_server_1_1_server_a48f91845058dd02bbfc50ea05d367328}{Accept\+Connections} ()
+\item 
+void \hyperlink{class_sample_shop_server_1_1_server_1_1_server_a910c619c51f72e62fd63cab0f86f3794}{Start} ()
+\begin{DoxyCompactList}\small\item\em Starts data processing \end{DoxyCompactList}\item 
+void \hyperlink{class_sample_shop_server_1_1_server_1_1_server_a4ed8200e4639be747e090bee9e8fcf0a}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stops data processing \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6b}{Server\+Status} \hyperlink{class_sample_shop_server_1_1_server_1_1_server_aa981a1322bbc9aa773a9aa46346e385d}{Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A server status \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+A general logic of Sample\+Shop\+Server. The main idea is the next\+: this component is responsible for\+: 
+
+
+\begin{DoxyItemize}
+\item listening and collecting requests fro Dwarf\+Clients;
+\item receiving specially formed responses from another layers of a Sample\+Shop\+Server ( as an exmaple, we can transmit a D\+C record )
+\item receiving and updating of a clients list ( O\+N/\+O\+F\+F/\+E\+R\+R\+O\+R/\+B\+U\+S\+Y client states ) 
+\end{DoxyItemize}
+
+\subsection{Перечисления}
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6b}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Server\+Status@{Server\+Status}}
+\index{Server\+Status@{Server\+Status}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Server\+Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Sample\+Shop\+Server.\+Server.\+Server.\+Server\+Status}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6b}
+
+
+Server statuses 
+
+\begin{Desc}
+\item[Элементы перечислений]\par
+\begin{description}
+\index{O\+N@{O\+N}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!O\+N@{O\+N}}\item[{\em 
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba90651ebea9a35ec4e018c8157492e17c}{}O\+N\label{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba90651ebea9a35ec4e018c8157492e17c}
+}]\index{O\+F\+F@{O\+F\+F}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!O\+F\+F@{O\+F\+F}}\item[{\em 
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba88559a0cfd8250c9d65970cc145c92d4}{}O\+F\+F\label{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba88559a0cfd8250c9d65970cc145c92d4}
+}]\index{B\+U\+S\+Y@{B\+U\+S\+Y}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!B\+U\+S\+Y@{B\+U\+S\+Y}}\item[{\em 
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba802706a9238e2928077f97736854bad4}{}B\+U\+S\+Y\label{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6ba802706a9238e2928077f97736854bad4}
+}]\index{E\+R\+R\+O\+R@{E\+R\+R\+O\+R}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!E\+R\+R\+O\+R@{E\+R\+R\+O\+R}}\item[{\em 
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6babb1ca97ec761fc37101737ba0aa2e7c5}{}E\+R\+R\+O\+R\label{class_sample_shop_server_1_1_server_1_1_server_a0b89d20b2f19ee5580acbbc73887bb6babb1ca97ec761fc37101737ba0aa2e7c5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a07d76048d77e7256ded3491bec8c7349}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Server()}]{\setlength{\rightskip}{0pt plus 5cm}Sample\+Shop\+Server.\+Server.\+Server.\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_server_1_1_server_a07d76048d77e7256ded3491bec8c7349}
+
+
+\subsection{Методы}
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a48f91845058dd02bbfc50ea05d367328}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Accept\+Connections@{Accept\+Connections}}
+\index{Accept\+Connections@{Accept\+Connections}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Accept\+Connections()}]{\setlength{\rightskip}{0pt plus 5cm}void Sample\+Shop\+Server.\+Server.\+Server.\+Accept\+Connections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_server_1_1_server_a48f91845058dd02bbfc50ea05d367328}
+
+
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sample_shop_server_1_1_server_1_1_server_a48f91845058dd02bbfc50ea05d367328_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a2b33d91f4e6c1ddb738e8edf35e4c6ad}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Setup\+Socket@{Setup\+Socket}}
+\index{Setup\+Socket@{Setup\+Socket}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Setup\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}void Sample\+Shop\+Server.\+Server.\+Server.\+Setup\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_server_1_1_server_a2b33d91f4e6c1ddb738e8edf35e4c6ad}
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a910c619c51f72e62fd63cab0f86f3794}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Start@{Start}}
+\index{Start@{Start}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Sample\+Shop\+Server.\+Server.\+Server.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_server_1_1_server_a910c619c51f72e62fd63cab0f86f3794}
+
+
+Starts data processing 
+
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_a4ed8200e4639be747e090bee9e8fcf0a}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Stop@{Stop}}
+\index{Stop@{Stop}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Stop()}]{\setlength{\rightskip}{0pt plus 5cm}void Sample\+Shop\+Server.\+Server.\+Server.\+Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sample_shop_server_1_1_server_1_1_server_a4ed8200e4639be747e090bee9e8fcf0a}
+
+
+Stops data processing 
+
+
+
+\subsection{Полный список свойств}
+\hypertarget{class_sample_shop_server_1_1_server_1_1_server_aa981a1322bbc9aa773a9aa46346e385d}{}\index{Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}!Status@{Status}}
+\index{Status@{Status}!Sample\+Shop\+Server\+::\+Server\+::\+Server@{Sample\+Shop\+Server\+::\+Server\+::\+Server}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server\+Status} Sample\+Shop\+Server.\+Server.\+Server.\+Status\hspace{0.3cm}{\ttfamily [get]}}\label{class_sample_shop_server_1_1_server_1_1_server_aa981a1322bbc9aa773a9aa46346e385d}
+
+
+A server status 
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Sample\+Shop\+Server/\+Server/\hyperlink{_server_8cs}{Server.\+cs}\end{DoxyCompactItemize}

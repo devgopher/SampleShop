@@ -1,0 +1,270 @@
+\hypertarget{class_logger_1_1_logger}{}\section{Класс Logger.\+Logger}
+\label{class_logger_1_1_logger}\index{Logger.\+Logger@{Logger.\+Logger}}
+
+
+Logger main class.  
+
+
+
+
+Граф наследования\+:Logger.\+Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_logger_1_1_logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Logger.\+Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_logger_1_1_logger__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_logger_1_1_logger_a811509da41ba54f4fb1ce45a50ee2f4c}{Add\+Log\+Element} (\hyperlink{interface_logger_1_1_i_log_element}{I\+Log\+Element} elem)
+\begin{DoxyCompactList}\small\item\em Adds a new log output element \end{DoxyCompactList}\item 
+String \hyperlink{class_logger_1_1_logger_ac8b9cdb189a9e8b8f830051527308e7c}{Get\+Text} ()
+\item 
+void \hyperlink{class_logger_1_1_logger_a21da357b867b66bf03eb34b972b27e87}{Write\+Entry} (string content)
+\begin{DoxyCompactList}\small\item\em Writes a simple entry \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_1_1_logger_a78d866035bb84b6d9a91e4cc9cd26ee3}{Write\+Debug} (string content)
+\begin{DoxyCompactList}\small\item\em Writes a debug message \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_1_1_logger_a24c21fa616eb7ab3e8b0dcaa3dfce902}{Write\+Error} (string content)
+\begin{DoxyCompactList}\small\item\em Writes an error message \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_1_1_logger_a4162a54dd74252bb985488d1aceb3fbe}{Write\+Error} (Exception exception)
+\begin{DoxyCompactList}\small\item\em Writes an error message \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_1_1_logger_a773ede85257be28172b09b61d1e21fd9}{Write\+Warning} (string content)
+\begin{DoxyCompactList}\small\item\em Writes a warning message \end{DoxyCompactList}\item 
+void \hyperlink{class_logger_1_1_logger_a77b75d0fc462c3a38b8c3f3a5007f842}{Dispose} ()
+\end{DoxyCompactItemize}
+\subsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_logger_1_1_logger}{Logger} \hyperlink{class_logger_1_1_logger_aed336728b69e8cbc0d8b29380c27fec0}{Get\+Instance} (string log\+\_\+dir=null, string filename=null)
+\begin{DoxyCompactList}\small\item\em Getting/defining a Logger instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_logger_1_1_logger_a545546c79c39f7d96d134b78f36a853e}{Logger} (string \+\_\+path, string \+\_\+application\+\_\+name, Encoding \+\_\+encoding, bool is\+\_\+single=true)
+\end{DoxyCompactItemize}
+\subsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_logger_1_1_logger_aed778c812410fe2990563386ea12da16}{Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static bool \hyperlink{class_logger_1_1_logger_a4895fc0515058056ca5e6ec929b57d51}{Is\+Single}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This property means a common amount of Logger objects, we can produce true = single-\/object mode false-\/ multi object moe \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Logger main class. 
+
+
+
+\subsection{Конструктор(ы)}
+\hypertarget{class_logger_1_1_logger_a545546c79c39f7d96d134b78f36a853e}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Logger(string \+\_\+path, string \+\_\+application\+\_\+name, Encoding \+\_\+encoding, bool is\+\_\+single=true)}]{\setlength{\rightskip}{0pt plus 5cm}Logger.\+Logger.\+Logger (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+path, }
+\item[{string}]{\+\_\+application\+\_\+name, }
+\item[{Encoding}]{\+\_\+encoding, }
+\item[{bool}]{is\+\_\+single = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_logger_1_1_logger_a545546c79c39f7d96d134b78f36a853e}
+
+
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_logger_1_1_logger_a545546c79c39f7d96d134b78f36a853e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Методы}
+\hypertarget{class_logger_1_1_logger_a811509da41ba54f4fb1ce45a50ee2f4c}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Add\+Log\+Element@{Add\+Log\+Element}}
+\index{Add\+Log\+Element@{Add\+Log\+Element}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Add\+Log\+Element(\+I\+Log\+Element elem)}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Add\+Log\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Log\+Element}}]{elem}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a811509da41ba54f4fb1ce45a50ee2f4c}
+
+
+Adds a new log output element 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em elem} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_1_1_logger_a77b75d0fc462c3a38b8c3f3a5007f842}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Dispose()}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Dispose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a77b75d0fc462c3a38b8c3f3a5007f842}
+\hypertarget{class_logger_1_1_logger_aed336728b69e8cbc0d8b29380c27fec0}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Get\+Instance@{Get\+Instance}}
+\index{Get\+Instance@{Get\+Instance}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Get\+Instance(string log\+\_\+dir=null, string filename=null)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Logger} Logger.\+Logger.\+Get\+Instance (
+\begin{DoxyParamCaption}
+\item[{string}]{log\+\_\+dir = {\ttfamily null}, }
+\item[{string}]{filename = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_logger_1_1_logger_aed336728b69e8cbc0d8b29380c27fec0}
+
+
+Getting/defining a Logger instance 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em log\+\_\+dir} & A directory for logs\\
+\hline
+{\em filename} & Log file name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+
+\end{DoxyReturn}
+
+
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_logger_1_1_logger_aed336728b69e8cbc0d8b29380c27fec0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_logger_1_1_logger_ac8b9cdb189a9e8b8f830051527308e7c}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Get\+Text@{Get\+Text}}
+\index{Get\+Text@{Get\+Text}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Get\+Text()}]{\setlength{\rightskip}{0pt plus 5cm}String Logger.\+Logger.\+Get\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_ac8b9cdb189a9e8b8f830051527308e7c}
+\hypertarget{class_logger_1_1_logger_a78d866035bb84b6d9a91e4cc9cd26ee3}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Write\+Debug@{Write\+Debug}}
+\index{Write\+Debug@{Write\+Debug}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Write\+Debug(string content)}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Write\+Debug (
+\begin{DoxyParamCaption}
+\item[{string}]{content}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a78d866035bb84b6d9a91e4cc9cd26ee3}
+
+
+Writes a debug message 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em content} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_1_1_logger_a21da357b867b66bf03eb34b972b27e87}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Write\+Entry@{Write\+Entry}}
+\index{Write\+Entry@{Write\+Entry}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Write\+Entry(string content)}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Write\+Entry (
+\begin{DoxyParamCaption}
+\item[{string}]{content}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a21da357b867b66bf03eb34b972b27e87}
+
+
+Writes a simple entry 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em content} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_1_1_logger_a24c21fa616eb7ab3e8b0dcaa3dfce902}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Write\+Error@{Write\+Error}}
+\index{Write\+Error@{Write\+Error}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Write\+Error(string content)}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Write\+Error (
+\begin{DoxyParamCaption}
+\item[{string}]{content}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a24c21fa616eb7ab3e8b0dcaa3dfce902}
+
+
+Writes an error message 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em content} & \\
+\hline
+\end{DoxyParams}
+
+
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_logger_1_1_logger_a24c21fa616eb7ab3e8b0dcaa3dfce902_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_logger_1_1_logger_a4162a54dd74252bb985488d1aceb3fbe}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Write\+Error@{Write\+Error}}
+\index{Write\+Error@{Write\+Error}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Write\+Error(\+Exception exception)}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Write\+Error (
+\begin{DoxyParamCaption}
+\item[{Exception}]{exception}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a4162a54dd74252bb985488d1aceb3fbe}
+
+
+Writes an error message 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em exception} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_logger_1_1_logger_a773ede85257be28172b09b61d1e21fd9}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Write\+Warning@{Write\+Warning}}
+\index{Write\+Warning@{Write\+Warning}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Write\+Warning(string content)}]{\setlength{\rightskip}{0pt plus 5cm}void Logger.\+Logger.\+Write\+Warning (
+\begin{DoxyParamCaption}
+\item[{string}]{content}
+\end{DoxyParamCaption}
+)}\label{class_logger_1_1_logger_a773ede85257be28172b09b61d1e21fd9}
+
+
+Writes a warning message 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em content} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Полный список свойств}
+\hypertarget{class_logger_1_1_logger_a4895fc0515058056ca5e6ec929b57d51}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Is\+Single@{Is\+Single}}
+\index{Is\+Single@{Is\+Single}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Is\+Single}]{\setlength{\rightskip}{0pt plus 5cm}bool Logger.\+Logger.\+Is\+Single\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\label{class_logger_1_1_logger_a4895fc0515058056ca5e6ec929b57d51}
+
+
+This property means a common amount of Logger objects, we can produce true = single-\/object mode false-\/ multi object moe 
+
+\hypertarget{class_logger_1_1_logger_aed778c812410fe2990563386ea12da16}{}\index{Logger\+::\+Logger@{Logger\+::\+Logger}!Path@{Path}}
+\index{Path@{Path}!Logger\+::\+Logger@{Logger\+::\+Logger}}
+\subsubsection[{Path}]{\setlength{\rightskip}{0pt plus 5cm}String Logger.\+Logger.\+Path\hspace{0.3cm}{\ttfamily [get]}}\label{class_logger_1_1_logger_aed778c812410fe2990563386ea12da16}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Logger/\hyperlink{_logger_8cs}{Logger.\+cs}\end{DoxyCompactItemize}

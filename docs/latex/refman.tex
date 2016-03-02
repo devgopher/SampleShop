@@ -1,0 +1,246 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Документация по Sample\+Shop. Последние изменения\+: Ср 2 Мар 2016 18\+:00\+:26. Создано системой Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Документация по Sample\+Shop. Последние изменения\+: Ср 2 Мар 2016 18\+:00\+:26. Создано системой Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Sample\+Shop \\[1ex]\large 0.\+1 }\\
+\vspace*{1cm}
+{\large Создано системой Doxygen 1.8.10}\\
+\vspace*{0.5cm}
+{\small Ср 2 Мар 2016 18:00:26}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{Алфавитный указатель пространств имен}
+\input{namespaces}
+\chapter{Иерархический список классов}
+\input{hierarchy}
+\chapter{Алфавитный указатель классов}
+\input{annotated}
+\chapter{Список файлов}
+\input{files}
+\chapter{Пространства имен}
+\input{namespace_common_facilities}
+\input{namespace_global}
+\input{namespace_logger}
+\input{namespace_sample_shop}
+\input{namespace_sample_shop_client}
+\input{namespace_sample_shop_server}
+\input{namespace_sample_shop_server_1_1_model}
+\input{namespace_sample_shop_server_1_1_server}
+\input{namespace_test_server}
+\input{namespace_utils}
+\chapter{Классы}
+\input{class_sample_shop_server_1_1_client_message}
+\input{class_common_facilities_1_1_common}
+\input{class_sample_shop_server_1_1_server_1_1_connection_info}
+\input{class_logger_1_1_console_log_element}
+\input{class_sample_shop_server_1_1_model_1_1_database_interaction}
+\input{class_logger_1_1_file_log_element}
+\input{interface_logger_1_1_i_log_element}
+\input{class_logger_1_1_log_element}
+\input{class_logger_1_1_logger}
+\input{class_logger_1_1_mail_log_element}
+\input{class_logger_1_1_mail_log_element_exception}
+\input{class_sample_shop_client_1_1_main_form}
+\input{class_sample_shop_server_1_1_message}
+\input{class_sample_shop_client_1_1_other_shops}
+\input{class_sample_shop_server_1_1_program}
+\input{class_test_server_1_1_program}
+\input{class_sample_shop_client_1_1_sample_shop_client_exception}
+\input{class_sample_shop_server_1_1_server_1_1_server}
+\input{class_sample_shop_server_1_1_server_message}
+\input{class_sample_shop_client_1_1_settings}
+\input{class_utils_1_1_utils_exception}
+\chapter{Файлы}
+\input{_console_utils_8cs}
+\input{_console_log_element_8cs}
+\input{_file_log_element_8cs}
+\input{_i_log_element_8cs}
+\input{_log_element_8cs}
+\input{_mail_log_element_8cs}
+\input{_mail_log_element_exception_8cs}
+\input{_logger_8cs}
+\input{_logger_2_properties_2_assembly_info_8cs}
+\input{_sample_shop_2_properties_2_assembly_info_8cs}
+\input{_sample_shop_server_2_properties_2_assembly_info_8cs}
+\input{_test_server_2_properties_2_assembly_info_8cs}
+\input{_static_resource_manager_8cs}
+\input{_common_facilities_8cs}
+\input{_sendmail_8cs}
+\input{_request_messaging_8cs}
+\input{_requests_8cs}
+\input{_common_settings_8cs}
+\input{_main_form_8cs}
+\input{_main_form_8_designer_8cs}
+\input{_main_form_logic_8cs}
+\input{_sample_shop_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs}
+\input{_sample_shop_server_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs}
+\input{_test_server_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs}
+\input{_sample_shop_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs}
+\input{_sample_shop_server_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs}
+\input{_test_server_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs}
+\input{_sample_shop_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs}
+\input{_sample_shop_server_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs}
+\input{_test_server_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs}
+\input{_other_shops_8cs}
+\input{_other_shops_8_designer_8cs}
+\input{_other_shops_logic_8cs}
+\input{_sample_shop_2_program_8cs}
+\input{_sample_shop_server_2_program_8cs}
+\input{_test_server_2_program_8cs}
+\input{_sample_shop_client_exception_8cs}
+\input{_settings_8cs}
+\input{_settings_8_designer_8cs}
+\input{_settings_logic_8cs}
+\input{_client_message_8cs}
+\input{_message_8cs}
+\input{_message_processing_8cs}
+\input{_protocol_8cs}
+\input{_server_message_8cs}
+\input{_database_interaction_8cs}
+\input{_responder_8cs}
+\input{_server_8cs}
+\input{_test_proc_8cs}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Алфавитный указатель}
+\printindex
+
+\end{document}
