@@ -31,9 +31,9 @@ namespace SampleShopClient
 			{
 				if ( sender_grid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 ) {
 					var selected_row = sender_grid.Rows[e.RowIndex];
-					if ( selected_row.Cells["good_id"].Value != null ) {
+					if ( selected_row.Cells[GoodId.Name].Value != null ) {
 						// обрабатываем нажатие кнопки в ячейке
-						var other_shops= new OtherShops( Int64.Parse(selected_row.Cells["good_id"].Value.ToString()));
+						var other_shops= new OtherShops( Int64.Parse(selected_row.Cells[GoodId.Name].Value.ToString()));
 						other_shops.Show();
 					}
 				}
@@ -49,9 +49,9 @@ namespace SampleShopClient
 			Int32 new_good_cnt = -1;
 			Int64 good_id = -1;
 			
-			if ( sender_grid.Columns[e.ColumnIndex].Name == "GoodQuantity") {
-				if ( Int32.TryParse(selected_row.Cells["GoodQuantity"].Value.ToString(), out new_good_cnt) &&
-				    Int64.TryParse(selected_row.Cells["GoodId"].Value.ToString(), out good_id))
+			if ( sender_grid.Columns[e.ColumnIndex].Name == GoodQuantity.Name) {
+				if ( Int32.TryParse(selected_row.Cells[GoodQuantity.Name].Value.ToString(), out new_good_cnt) &&
+				    Int64.TryParse(selected_row.Cells[GoodId.Name].Value.ToString(), out good_id))
 				{
 					Requests.UpdateGoodsCount( good_id, new_good_cnt );
 				}

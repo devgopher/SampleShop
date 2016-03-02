@@ -29,11 +29,12 @@ namespace SampleShopClient
 			if ( goods != null && shops != null ) {
 				foreach ( var good_pars in goods.Contents ) {
 					foreach ( var shop_pars in shops.Contents ) {
-						int row_index = current_shop_goodies.Rows.Add();
-						if ( good_pars["shop_id"].Equals( shop_pars["shop_id"] )  &&
+						if ( good_pars["shop_id"] == shop_pars["shop_id"]  &&
 						    shop_pars["shop_id"] == CommonSettings.CurrentShopId.ToString()) {
-							current_shop_goodies.Rows[row_index].Cells["GoodName"].Value = good_pars["good_name"];
-							current_shop_goodies.Rows[row_index].Cells["GoodQuantity"].Value = good_pars["good_count"];
+							int row_index = current_shop_goodies.Rows.Add();
+							current_shop_goodies.Rows[row_index].Cells[GoodName.Name].Value = good_pars["good_name"];
+							current_shop_goodies.Rows[row_index].Cells[GoodId.Name].Value = good_pars["good_id"];
+							current_shop_goodies.Rows[row_index].Cells[GoodQuantity.Name].Value = good_pars["good_count"];
 						}
 					}
 				}

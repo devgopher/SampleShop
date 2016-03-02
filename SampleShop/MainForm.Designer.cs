@@ -17,7 +17,6 @@ namespace SampleShopClient
 		private System.Windows.Forms.DataGridViewTextBoxColumn GoodName;
 		private System.Windows.Forms.DataGridViewTextBoxColumn GoodQuantity;
 		private System.Windows.Forms.DataGridViewButtonColumn LookInOtherShops;
-		private System.Windows.Forms.DataGridViewTextBoxColumn good_id;
 		private System.Windows.Forms.DataGridViewTextBoxColumn GoodId;
 		
 		/// <summary>
