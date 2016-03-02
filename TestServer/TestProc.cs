@@ -36,12 +36,10 @@ namespace TestServer
 			hw_stream.Write( xml_bytes, 0, xml_bytes.Length );
 			hw_stream.Close();
 			
-			while (!hw.HaveResponse) {
-			}
-			
+		
 			HttpWebResponse resp = (HttpWebResponse)hw.GetResponse();
 
-			byte[] resp_buffer = new byte[16000];
+			byte[] resp_buffer = new byte[256000];
 			var resp_stream = resp.GetResponseStream();
 			
 			while(resp_stream.Read( resp_buffer, 0, resp_buffer.Length ) > 0)
@@ -51,7 +49,7 @@ namespace TestServer
 			
 			var resp_string = Encoding.UTF8.GetString( resp_buffer );
 			
-			Console.WriteLine("Respond: "+resp_string);
+			Console.WriteLine("Responce: "+resp_string.Replace("\0",""));
 			
 		}
 		

@@ -16,6 +16,7 @@ namespace TestServer
 			string ip_addr = Console.ReadLine();
 			
 			TestProc.TestMessageSendReceive( ip_addr );
+			TestProc.TestMessageSendReceive( ip_addr );
 			TestProc.TestQuery();
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);

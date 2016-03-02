@@ -4,8 +4,6 @@
  * Время: 0:06
  */
 using System;
-using System.Text;
-using System.Windows.Forms;
 using System.Configuration;
 using SampleShopServer;
 
@@ -77,7 +75,7 @@ namespace SampleShopClient
 		public static ServerMessage GetGoods() {
 			try {
 				var cm_goods = new ClientMessage();
-				cm_goods.Type = Protocol.get_shop_list;
+				cm_goods.Type = Protocol.get_good_list;
 				return RequestMessaging.Process( cm_goods );
 			} catch ( Exception ex ) {
 				throw new SampleShopClientException( "Ошибка получения списка товаров:"+ex.Message, ex );

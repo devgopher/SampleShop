@@ -28,7 +28,6 @@ namespace SampleShopClient
 		public static ServerMessage Process( ClientMessage msg )  {
 			var request = SendRequest( msg );
 			var response = GetResponse( request );
-			
 			if ( response != null ) {
 				string response_text = GetResponseText( response );
 				return RequestMessaging.ProcessResponseText( response_text );
@@ -44,8 +43,12 @@ namespace SampleShopClient
 		private static string GetResponseText( HttpWebResponse response ) {
 			var resp_stream = response.GetResponseStream();
 			var rec_bytes = new byte[max_ba_length];
-			resp_stream.Read( rec_bytes, 0, max_ba_length );
-			return Encoding.UTF8.GetString( rec_bytes );
+			string ret = String.Empty;
+
+			while (resp_stream.Read( rec_bytes, 0, 10000 ) > 0 ) {
+				ret += Encoding.UTF8.GetString( rec_bytes );
+			}
+			return ret.Replace("\0","");
 		}
 		
 		/// <summary>
@@ -54,6 +57,8 @@ namespace SampleShopClient
 		/// <param name="contents">A text of response</param>
 		/// <returns>ServerMessage</returns>
 		private static ServerMessage ProcessResponseText( string contents ) {
+			if ( contents != String.Empty )
+				System.Windows.Forms.Clipboard.SetText( contents );
 			if ( contents.Contains("<root>") &&
 			    contents.Contains("</root>"))
 			{
@@ -101,7 +106,6 @@ namespace SampleShopClient
 		/// Get's an answer from a server
 		/// </summary>
 		/// <param name="web_request">Request</param>
-		/// <param name="timeout">Timeout, sec</param>
 		/// <returns>Server response</returns>
 		private static HttpWebResponse GetResponse( HttpWebRequest web_request ) {
 			return (HttpWebResponse)web_request.GetResponse();

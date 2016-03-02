@@ -63,6 +63,27 @@ namespace SampleShopServer
 			return null;
 		}
 		
+		private static bool AddGoodsCountRequest( ClientMessage msg ) {
+			string query = "INSERT INTO \"GoodsInShops\" ( id, \"Count\", \"Shop_id\", \"Good_id\") " +
+				" VALUES ((SELECT max(id) + 1 FROM \"GoodsInShops\"), "+msg.Contents["quantity"]+
+				", "+msg.Contents["shop_id"] + ", "+msg.Contents["good_id"]+")";
+			
+			var dbint = new Model.DatabaseInteraction();
+			dbint.Connection.Open();
+			var transaction = dbint.BeginTransaction();
+			
+			try {
+				var succ = dbint.ExecuteModify( query, transaction );
+				dbint.CommitTransaction( transaction );
+				dbint.Connection.Close();
+				return succ;
+			} catch ( Exception ex ) {
+				logger.WriteError( "Error while updating a record: "+ex.Message );
+				dbint.RollbackTransaction( transaction );
+			}
+			return false;
+		}
+		
 		private static bool UpdateGoodsCountRequest( ClientMessage msg ) {
 			string query = "UPDATE \"GoodsInShops\"  SET " +
 				"\"Count\"='"+msg.Contents["quantity"]+"'" +
@@ -153,7 +174,12 @@ namespace SampleShopServer
 						resp_msg.AddItem()["shop_id"] = new_shop_id.ToString();
 						return resp_msg;
 					case Protocol.change_quantity:
-						resp_msg = ResponseMessage( UpdateGoodsCountRequest( msg ) );						
+						var upd_succ = UpdateGoodsCountRequest( msg );
+						
+						if ( upd_succ == false )
+							upd_succ = AddGoodsCountRequest( msg );
+						
+						resp_msg = ResponseMessage( upd_succ );						
 						return resp_msg;
 					case Protocol.mod_shop:
 						resp_msg = ResponseMessage( UpdateShopRequest( msg ) );

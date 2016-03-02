@@ -23,6 +23,7 @@ namespace SampleShopClient
 			goods = Requests.GetGoods();
 			ServerMessage shops = Requests.GetShops();
 			
+			
 			current_shop_goodies.Rows.Clear();
 			
 			if ( goods != null && shops != null ) {

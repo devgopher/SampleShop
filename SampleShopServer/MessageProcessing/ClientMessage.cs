@@ -19,7 +19,7 @@ namespace SampleShopServer
 		/// <param name="in_contents"></param>
 		public override void FromXML( string in_contents ) {
 			try {
-				XmlDocument doc = new XmlDocument();
+				var doc = new XmlDocument();
 				doc.LoadXml( in_contents );				
 				var root_element = doc.DocumentElement;				
 				Contents.Clear();				

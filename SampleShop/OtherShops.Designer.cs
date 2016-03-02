@@ -14,10 +14,6 @@ namespace SampleShopClient
 		private System.Windows.Forms.DataGridView shops_and_goodies;
 		private System.Windows.Forms.DataGridViewTextBoxColumn GoodName;
 		private System.Windows.Forms.DataGridViewTextBoxColumn GoodQuantity;
-		private System.Windows.Forms.DataGridViewTextBoxColumn shop_name;
-		private System.Windows.Forms.DataGridViewTextBoxColumn shop_address;
-		private System.Windows.Forms.DataGridViewTextBoxColumn shop_phone;
-		private System.Windows.Forms.DataGridViewTextBoxColumn shop_email;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ShopAddress;
